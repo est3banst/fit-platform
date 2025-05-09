@@ -16,7 +16,7 @@ export default function Footer() {
             <li className={` ${pathname === '/' ? "text-blue-500" : "text-gray-600"}`}>Inicio</li>
             </Link>
             <Link href='/courses'>
-            <li className={` ${pathname === '/courses' ? "text-blue-500" : "text-gray-600"}`}>Cursos</li>
+            <li className={` ${pathname.includes('/courses') ? "text-blue-500" : "text-gray-600"}`}>Cursos</li>
             
             </Link>
             <Link href='/blog'>
@@ -32,10 +32,11 @@ export default function Footer() {
         <section></section>
       </div>
        
-       <div className="mb-4">
+       <div className="mb-4 mt-5">
         <h1 className="text-3xl font-bold mb-6">Tu Nuevo Self</h1>
         <p className="text-gray-600">Tu Nuevo Self es una plataforma de cursos en línea que te ayuda a mejora tu estado físico a través de ejercicios.</p>
         <p className="text-gray-600">¡Únete a nosotros y comienza hoy mismo a mejorar y cuidar de tu cuerpo!</p>
+       <small className="underline text-xs">Antes de comenzar a hacer cualquier tipo de ejercicio recomendamos consultar a un doctor</small>
        </div>
         <small>
         © 2025 Tu Nuevo Self - Todos los derechos reservados

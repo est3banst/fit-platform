@@ -1,9 +1,13 @@
-export type Course = {
+export interface Course {
   id: string;
   title: string;
-    image: string;
-    description: string;
-    price: number;
-    discount?: number;
-
+  image: string;
+  price: number;
+  discount?: number;
+  description: string;
+  materials?: {
+    videoHours?: number;
+    ebooks?: string[]; 
+    extras?: string[]; 
+  };
 }

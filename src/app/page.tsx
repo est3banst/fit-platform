@@ -8,15 +8,15 @@ export default function Home() {
   return (
     <div className=''>
       <Header />
-      <main className="p-8">
+      <main className="p-8 pt-24">
         <section className="text-center">
           <h1 className="text-4xl font-bold mb-4">Transforma tu cuerpo, en cualquier momento, en cualquier lugar</h1>
           <p className="text-lg mb-8">Unete a la comunidad de el fitness, aumenta tu fuerza y mejora tu salud desde tu casa</p>
         </section>
-
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-         <h2 className='text-lg border-b-2 border-orange-500 w-max'>Los más populares</h2>
-         <small className='text-xs text-gray-500'>Obtendrás: Videos instructivos para realizar los ejercicios, libros digitales que contienen años de resumenes de materiales respaldados por ciencia, consejos y sugerencias para no abandonar a medio camino</small>
+        <h2 className='text-lg border-b-2 border-orange-500 w-max'>Los más populares</h2>
+         <small className='py-4 text-xs text-gray-500'>Dentro de cada plan obtendrás: Videos instructivos para realizar los ejercicios; libros digitales que contienen años de resumenes de materiales respaldados por ciencia; consejos y sugerencias para no abandonar a medio camino y algunos 'secretos' del fitness que quizás no conocías</small>
+        
+        <section className="grid py-4 grid-cols-1 md:grid-cols-3 gap-6">
           {courses.slice(0, 3).map(course => (
             <CourseCard key={course.id} course={course} />
           ))}
@@ -24,7 +24,7 @@ export default function Home() {
       </main>
       <div>
         <section className='p-2 my-2'>
-          <article className=''>
+          <article className='text-center text-lg'>
           Por qué casi todo el mundo se equivoca sobre el ejercicio... incluyendo cómo ganar masa muscular magra y eliminar la grasa no deseada.
           </article>
           <Link href='/blog' className='text-blue-600 text-center mb-4 mt-2 block'>Lee más en nuestro blog</Link>

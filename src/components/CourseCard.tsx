@@ -23,9 +23,14 @@ export default function CourseCard({ course } :CourseCardProps ) {
       </div>
        <div className='flex gap-4 justify-between w-4/6 px-4'>
        <p className='text-gray-500 line-through'> $ {oldPrice }</p>
-        <p className="text-xl text-gray-900">${finalPrice}</p>
+        <p className="text-xl text-green-600">${finalPrice}</p>
        
         </div>
+        {course.materials && (
+  <div className="px-4 pb-2 text-sm text-gray-600">
+    <p><strong>Incluye:</strong> {course.materials.videoHours}h de video, {course.materials.ebooks?.length || 0} eBooks</p>
+  </div>
+)}
          <p className='p-4'>{
           course.description.length > 100
             ? `${course.description.slice(0, 100)}...`
